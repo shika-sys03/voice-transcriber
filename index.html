@@ -203,7 +203,7 @@ return r;}
 
 function tr(){on?sp():sr();}
 function sr(){rec=cr();try{rec.start();startAudioAnalysis();}catch(e){tw('マイクの起動に失敗');}}
-function sp(){on=false;if(rec){rec.stop();rec=null;}br.classList.remove('on');br.querySelector('span').textContent='録音';sd.classList.remove('on');stx.textContent='停止';li.classList.remove('on');stopAudioAnalysis();if(ents.length>0)ss();}
+function sp(){on=false;if(rec){rec.stop();rec=null;}br.classList.remove('on');br.querySelector('span').textContent='録音';sd.classList.remove('on');stx.textContent='停止';li.classList.remove('on');clearInterval(ti);ti=null;stopAudioAnalysis();if(ents.length>0)ss();}
 
 function ae(text,speaker){
   speaker=speaker||currentSpeaker;
